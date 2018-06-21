@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="person.name.FirstName" table="FIRST_NAMES">
+		<id name="id" type="int">
+			<column name="FIRST_NAME_ID" precision="38" scale="0" />
+			<generator class="assigned" />
+		</id>
+		<property name="value" type="string">
+			<column name="FIRST_NAME" length="30" />
+		</property>
+	</class>
+</hibernate-mapping>

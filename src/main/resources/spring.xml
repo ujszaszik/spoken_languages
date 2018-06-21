@@ -1,0 +1,234 @@
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="person1" class="person.Person">
+		<property name="name">
+			<ref bean="name1" />
+		</property>
+		<property name="spokenLanguages">
+			<set>
+				<ref bean="lang1" />
+				<ref bean="lang2" />
+				<ref bean="lang3" />
+				<ref bean="lang4" />
+			</set>
+		</property>
+	</bean>
+
+	<bean id="person2" class="person.Person">
+		<property name="name">
+			<ref bean="name2" />
+		</property>
+		<property name="spokenLanguages">
+			<set>
+				<ref bean="lang4" />
+				<ref bean="lang5" />
+				<ref bean="lang6" />
+			</set>
+		</property>
+	</bean>
+
+	<bean id="person3" class="person.Person">
+		<property name="name">
+			<ref bean="name3" />
+		</property>
+		<property name="spokenLanguages">
+			<set>
+				<ref bean="lang5" />
+				<ref bean="lang6" />
+				<ref bean="lang7" />
+				<ref bean="lang8" />
+			</set>
+		</property>
+	</bean>
+
+	<bean id="person4" class="person.Person">
+		<property name="name">
+			<ref bean="name4" />
+		</property>
+		<property name="spokenLanguages">
+			<set>
+				<ref bean="lang7" />
+				<ref bean="lang8" />
+				<ref bean="lang9" />
+				<ref bean="lang10" />
+			</set>
+		</property>
+	</bean>
+
+	<bean id="person5" class="person.Person">
+		<property name="name">
+			<ref bean="name5" />
+		</property>
+		<property name="spokenLanguages">
+			<set>
+				<ref bean="lang11" />
+			</set>
+		</property>
+	</bean>
+
+	<bean id="lang1" class="language.Language">
+		<property name="id" value="1" />
+		<property name="name" value="Magyar" />
+		<property name="isoCode" value="hun" />
+	</bean>
+
+	<bean id="lang2" class="language.Language">
+		<property name="id" value="2" />
+		<property name="name" value="English" />
+		<property name="isoCode" value="eng" />
+	</bean>
+
+	<bean id="lang3" class="language.Language">
+		<property name="id" value="3" />
+		<property name="name" value="Espanol" />
+		<property name="isoCode" value="spa" />
+	</bean>
+
+	<bean id="lang4" class="language.Language">
+		<property name="id" value="4" />
+		<property name="name" value="Deutsch" />
+		<property name="isoCode" value="ger" />
+	</bean>
+
+	<bean id="lang5" class="language.Language">
+		<property name="id" value="5" />
+		<property name="name" value="Portuguese" />
+		<property name="isoCode" value="por" />
+	</bean>
+
+	<bean id="lang6" class="language.Language">
+		<property name="id" value="6" />
+		<property name="name" value="Wuhanhua" />
+		<property name="isoCode" value="zho" />
+	</bean>
+
+	<bean id="lang7" class="language.Language">
+		<property name="id" value="7" />
+		<property name="name" value="Sioux" />
+		<property name="isoCode" value="sio" />
+	</bean>
+
+	<bean id="lang8" class="language.Language">
+		<property name="id" value="8" />
+		<property name="name" value="Francais" />
+		<property name="isoCode" value="fra" />
+	</bean>
+
+	<bean id="lang9" class="language.Language">
+		<property name="id" value="9" />
+		<property name="name" value="Turkce" />
+		<property name="isoCode" value="tur" />
+	</bean>
+
+	<bean id="lang10" class="language.Language">
+		<property name="id" value="10" />
+		<property name="name" value="Hebrew" />
+		<property name="isoCode" value="heb" />
+	</bean>
+
+	<bean id="lang11" class="language.Language">
+		<property name="id" value="11" />
+		<property name="name" value="Ancient Greek" />
+		<property name="isoCode" value="grc" />
+	</bean>
+
+	<bean id="name1" class="person.name.Name">
+		<property name="firstName">
+			<ref bean="firstName1" />
+		</property>
+		<property name="lastName">
+			<ref bean="lastName1" />
+		</property>
+	</bean>
+
+	<bean id="name2" class="person.name.Name">
+		<property name="firstName">
+			<ref bean="firstName2" />
+		</property>
+		<property name="lastName">
+			<ref bean="lastName2" />
+		</property>
+	</bean>
+
+	<bean id="name3" class="person.name.Name">
+		<property name="firstName">
+			<ref bean="firstName3" />
+		</property>
+		<property name="lastName">
+			<ref bean="lastName3" />
+		</property>
+	</bean>
+
+	<bean id="name4" class="person.name.Name">
+		<property name="firstName">
+			<ref bean="firstName4" />
+		</property>
+		<property name="lastName">
+			<ref bean="lastName4" />
+		</property>
+	</bean>
+
+	<bean id="name5" class="person.name.Name">
+		<property name="firstName">
+			<ref bean="firstName5" />
+		</property>
+		<property name="lastName">
+			<ref bean="lastName5" />
+		</property>
+	</bean>
+
+	<bean id="firstName1" class="person.name.FirstName">
+		<property name="id" value="1" />
+		<property name="value" value="Fegyverneky" />
+	</bean>
+
+	<bean id="firstName2" class="person.name.FirstName">
+		<property name="id" value="2" />
+		<property name="value" value="Járay" />
+	</bean>
+
+	<bean id="firstName3" class="person.name.FirstName">
+		<property name="id" value="3" />
+		<property name="value" value="Macskássy" />
+	</bean>
+
+	<bean id="firstName4" class="person.name.FirstName">
+		<property name="id" value="4" />
+		<property name="value" value="Hasselbrunner" />
+	</bean>
+
+	<bean id="firstName5" class="person.name.FirstName">
+		<property name="id" value="5" />
+		<property name="value" value="Mükénéi" />
+	</bean>
+
+	<bean id="lastName1" class="person.name.LastName">
+		<property name="id" value="1" />
+		<property name="value" value="Flóra" />
+	</bean>
+
+
+	<bean id="lastName2" class="person.name.LastName">
+		<property name="id" value="2" />
+		<property name="value" value="Zakariás" />
+	</bean>
+
+	<bean id="lastName3" class="person.name.LastName">
+		<property name="id" value="3" />
+		<property name="value" value="Lukrécia" />
+	</bean>
+
+	<bean id="lastName4" class="person.name.LastName">
+		<property name="id" value="4" />
+		<property name="value" value="Etelka" />
+	</bean>
+
+	<bean id="lastName5" class="person.name.LastName">
+		<property name="id" value="5" />
+		<property name="value" value="Agamemnón" />
+	</bean>
+
+</beans>
